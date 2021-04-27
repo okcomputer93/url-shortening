@@ -1,7 +1,7 @@
 <template>
-    <button class="button__primary" :class="form" :href="href">
+    <a class="button__primary" :class="shape" :href="href">
         <slot></slot>
-    </button>
+    </a>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     name: "ButtonPrimary",
     props: ["href", "styles"],
     computed: {
-        form() {
+        shape() {
             const forms = this.styles.split("-");
             return `p-${forms[0]} text-${forms[0]} p-${forms[0]} is-${forms[1]}`;
         },
@@ -25,6 +25,7 @@ export default {
     font-weight: 700;
     cursor: pointer;
     border: none;
+    text-decoration: none;
     transition: all 0.4s ease-in;
 
     &:hover {
