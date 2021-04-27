@@ -1,8 +1,6 @@
 <template>
     <div id="app">
-        <the-button styles="is-rounded text-md p-md" href="#"
-            >Sign Up</the-button
-        >
+        <the-button styles="lg-squared" href="#">Sign Up</the-button>
     </div>
 </template>
 

@@ -1,13 +1,19 @@
 <template>
-    <a class="button__primary" :class="styles" :href="href">
+    <button class="button__primary" :class="form" :href="href">
         <slot></slot>
-    </a>
+    </button>
 </template>
 
 <script>
 export default {
     name: "ButtonPrimary",
     props: ["href", "styles"],
+    computed: {
+        form() {
+            const forms = this.styles.split("-");
+            return `p-${forms[0]} text-${forms[0]} p-${forms[0]} is-${forms[1]}`;
+        },
+    },
 };
 </script>
 
@@ -18,6 +24,11 @@ export default {
     color: $light;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: none;
+    border: none;
+    transition: all 0.4s ease-in;
+
+    &:hover {
+        background-color: lighten($primary, 15);
+    }
 }
 </style>
