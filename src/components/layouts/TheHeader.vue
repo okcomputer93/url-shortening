@@ -42,14 +42,14 @@ export default {
         align-items: center;
 
         &--left {
-            flex-basis: 30%;
+            flex-basis: 35rem;
             display: flex;
             justify-content: space-evenly;
             align-items: center;
         }
 
         &--right {
-            flex-basis: 15%;
+            flex-basis: 17rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
