@@ -1,19 +1,18 @@
 <template>
-    <a class="logo__link" href="/">
-        <h1 class="logo__title">Shortly</h1>
-    </a>
+    <h1 class="logo__title">
+        <a class="logo__link" href="/">Shortly</a>
+    </h1>
 </template>
 
 <style lang="scss">
 .logo {
-    &__link {
-        text-decoration: none;
-    }
-
     &__title {
-        color: $primary-dark;
         font-size: 3rem;
         font-weight: 700;
+    }
+    &__link {
+        text-decoration: none;
+        color: $dark-blue;
     }
 }
 </style>
