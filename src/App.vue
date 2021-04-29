@@ -25,13 +25,10 @@
 
 <script>
 import TheButton from "./components/elements/TheButton.vue";
-// import SocialIcon from "./components/elements/SocialIcon.vue";
 import TheHeader from "./components/layouts/TheHeader.vue";
 export default {
     name: "App",
     components: {
-        // TheButton,
-        // SocialIcon,
         TheHeader,
         TheButton,
     },
@@ -42,6 +39,7 @@ export default {
 .main {
     max-width: $max-width;
     margin: 2rem auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,20 +56,21 @@ export default {
         font-weight: 400;
         font-size: 2rem;
         color: $neutral-violet;
-        padding: 1rem 0 3rem;
+        padding: 0.5rem 0 3rem;
+        letter-spacing: 1px;
     }
 
     &__column--left {
-        flex: 2;
+        flex: 1;
     }
     &__column--right {
         flex: 1;
-        width: 50%;
     }
 
     &__image {
+        width: 130%;
         display: inline-block;
-        transform: translateX(20%);
+        transform: translateX(12%);
     }
 }
 </style>
