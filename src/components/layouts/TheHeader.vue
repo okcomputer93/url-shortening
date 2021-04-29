@@ -31,7 +31,7 @@ export default {
 .navigation {
     max-width: $max-width;
     margin: 0 auto;
-    padding: 3rem 2rem;
+    padding: 3rem $margin-body;
 
     display: flex;
 
