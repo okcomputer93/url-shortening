@@ -32,6 +32,10 @@
                 <cards></cards>
             </div>
         </section>
+        <banner
+            message="Boost your links today"
+            text-button="Get Started"
+        ></banner>
     </div>
 </template>
 
@@ -39,12 +43,14 @@
 import TheButton from "./components/elements/TheButton.vue";
 import TheHeader from "./components/layouts/TheHeader.vue";
 import Cards from "./components/layouts/Cards.vue";
+import Banner from "./components/layouts/Banner.vue";
 export default {
     name: "App",
     components: {
         TheHeader,
         TheButton,
         Cards,
+        Banner,
     },
 };
 </script>
