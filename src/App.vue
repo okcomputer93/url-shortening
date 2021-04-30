@@ -53,7 +53,7 @@ export default {
 .main {
     max-width: $max-width;
     margin: 2rem auto;
-    padding: 0 $margin-body;
+    padding: 0 $margin-body 15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
