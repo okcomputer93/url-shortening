@@ -104,6 +104,10 @@ export default {
         padding-bottom: 1rem;
         font-weight: 400;
         font-size: 1.2rem;
+
+        &:hover {
+            color: $primary;
+        }
     }
 }
 </style>
