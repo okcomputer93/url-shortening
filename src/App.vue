@@ -36,6 +36,7 @@
             message="Boost your links today"
             text-button="Get Started"
         ></banner>
+        <the-footer></the-footer>
     </div>
 </template>
 
@@ -44,6 +45,7 @@ import TheButton from "./components/elements/TheButton.vue";
 import TheHeader from "./components/layouts/TheHeader.vue";
 import Cards from "./components/layouts/Cards.vue";
 import Banner from "./components/layouts/Banner.vue";
+import TheFooter from "./components/layouts/Footer.vue";
 export default {
     name: "App",
     components: {
@@ -51,6 +53,7 @@ export default {
         TheButton,
         Cards,
         Banner,
+        TheFooter,
     },
 };
 </script>

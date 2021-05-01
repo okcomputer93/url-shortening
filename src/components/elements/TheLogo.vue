@@ -1,8 +1,33 @@
 <template>
     <h1 class="logo__title">
-        <a class="logo__link" href="/">Shortly</a>
+        <a class="logo__link" :class="textColor" href="/">Shortly</a>
     </h1>
 </template>
+
+<script>
+export default {
+    name: "TheLogo",
+    props: {
+        color: {
+            type: String,
+            default: "dark",
+        },
+    },
+    data() {
+        return {
+            colors: {
+                clear: "text-clear",
+                dark: "text-dark",
+            },
+        };
+    },
+    computed: {
+        textColor() {
+            return this.colors[this.color];
+        },
+    },
+};
+</script>
 
 <style lang="scss">
 .logo {
@@ -12,7 +37,6 @@
     }
     &__link {
         text-decoration: none;
-        color: $dark-blue;
     }
 }
 </style>

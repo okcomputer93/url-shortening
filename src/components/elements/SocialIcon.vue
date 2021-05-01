@@ -19,12 +19,14 @@ export default {
 <style lang="scss">
 .social {
     &__link {
-        display: inline-block;
+        display: block;
     }
 
     &__icon {
         filter: invert(100%);
         transition: all 0.4s ease-in;
+        width: 2rem;
+        height: 2rem;
 
         &:hover {
             filter: invert(74%) sepia(99%) saturate(371%) hue-rotate(117deg)
