@@ -1,9 +1,17 @@
-.is-rounded {
+.is-rounded-lg {
     border-radius: 5rem;
 }
 
-.is-squared {
+.is-rounded-sm {
+    border-radius: 5rem;
+}
+
+.is-squared-lg {
     border-radius: 0.8rem;
+}
+
+.is-squared-sm {
+    border-radius: 0.3rem;
 }
 
 .text-sm {
@@ -19,7 +27,7 @@
 }
 
 .p-sm {
-    padding: 0.8rem 2rem;
+    padding: 0.8rem 2.5rem;
 }
 
 .p-md {

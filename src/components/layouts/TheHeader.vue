@@ -9,7 +9,7 @@
             </div>
             <div class="navigation__links--right">
                 <a href="#" class="navigation__link">Login</a>
-                <the-button styles="sm-rounded" href="#">Sign Up</the-button>
+                <the-button styles="a-sm-rounded" href="/">Sign Up</the-button>
             </div>
         </div>
     </nav>

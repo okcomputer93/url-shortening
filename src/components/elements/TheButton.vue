@@ -1,17 +1,26 @@
-<template>
-    <a class="button__primary" :class="shape" :href="href">
-        <slot></slot>
-    </a>
-</template>
-
 <script>
 export default {
     name: "ButtonPrimary",
-    props: ["href", "styles"],
+    props: ["href", "styles", "type", "disabled"],
+    render(createElement) {
+        const element = this.styles.split("-")[0];
+        return createElement(
+            element,
+            {
+                attrs: {
+                    class: `button__primary ${this.shape}`,
+                    href: this.href,
+                    type: this.type,
+                    disabled: this.disabled,
+                },
+            },
+            this.$slots.default
+        );
+    },
     computed: {
         shape() {
             const forms = this.styles.split("-");
-            return `p-${forms[0]} text-${forms[0]} p-${forms[0]} is-${forms[1]}`;
+            return `text-${forms[1]} p-${forms[1]} is-${forms[2]}-${forms[1]}`;
         },
     },
 };
@@ -26,10 +35,15 @@ export default {
     cursor: pointer;
     border: none;
     text-decoration: none;
-    transition: all 0.4s ease-in;
+    transition: all 0.2s ease-in;
+    font-family: "Poppins", sans-serif;
 
     &:hover {
         background-color: lighten($primary, 15);
+    }
+
+    &:disabled {
+        background-color: lighten($primary, 25);
     }
 }
 </style>

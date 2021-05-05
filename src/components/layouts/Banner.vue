@@ -3,7 +3,7 @@
         <h3 class="banner__title" v-text="message"></h3>
         <the-button
             href="/"
-            styles="lg-rounded"
+            styles="a-lg-rounded"
             v-text="textButton"
         ></the-button>
     </div>

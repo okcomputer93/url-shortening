@@ -8,7 +8,7 @@
                     Build your brand's recognition and get detailed insights on
                     how your links are performing.
                 </p>
-                <the-button styles="lg-rounded" href="#"
+                <the-button styles="a-lg-rounded" href="/"
                     >Get Started</the-button
                 >
             </div>
@@ -21,6 +21,9 @@
             </div>
         </main>
         <section class="features">
+            <div class="shorten-bar">
+                <shorten-bar></shorten-bar>
+            </div>
             <div class="features__content">
                 <div class="features__top">
                     <h3 class="features__title">Advanced Statistics</h3>
@@ -43,6 +46,7 @@
 <script>
 import TheButton from "./components/elements/TheButton.vue";
 import TheHeader from "./components/layouts/TheHeader.vue";
+import ShortenBar from "./components/layouts/ShortenBar.vue";
 import Cards from "./components/layouts/Cards.vue";
 import Banner from "./components/layouts/Banner.vue";
 import TheFooter from "./components/layouts/Footer.vue";
@@ -50,6 +54,7 @@ export default {
     name: "App",
     components: {
         TheHeader,
+        ShortenBar,
         TheButton,
         Cards,
         Banner,
@@ -62,7 +67,7 @@ export default {
 .main {
     max-width: $max-width;
     margin: 2rem auto;
-    padding: 0 $margin-body 15rem;
+    padding: 0 $margin-body 12rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,6 +99,20 @@ export default {
         width: 130%;
         display: inline-block;
         transform: translateX(12%);
+    }
+}
+
+.shorten-bar {
+    max-width: $max-width;
+    margin: 2rem auto;
+    padding: 0 $margin-body;
+
+    & .shorten__container {
+        transform: translateY(-50%);
+    }
+
+    & .shorten__links {
+        margin-top: -7rem;
     }
 }
 
