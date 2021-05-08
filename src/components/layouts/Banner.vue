@@ -39,6 +39,10 @@ export default {
         padding-bottom: 2rem;
         color: $light;
         letter-spacing: -1px;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+        }
     }
 }
 </style>

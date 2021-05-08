@@ -64,29 +64,56 @@ export default {
     background-color: $dark-violet;
     padding: 6rem $margin-body;
 
+    @media only screen and (max-width: $bp-small) {
+        padding: 6rem 4rem;
+    }
+
     &__container {
         max-width: $max-width;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     }
 
     &__logo {
         flex: 2;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 5rem;
+        }
     }
 
     &__sections {
         flex: 3;
         display: flex;
         justify-content: space-between;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+        }
     }
 
     &__section {
         flex: 1;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 4rem;
+        }
+
         &--social {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
+            @media only screen and (max-width: $bp-small) {
+                min-width: 15rem;
+            }
         }
     }
 
@@ -95,6 +122,10 @@ export default {
         font-size: 1.2rem;
         color: $light;
         padding-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 3rem;
+        }
     }
 
     &__link {
@@ -104,6 +135,10 @@ export default {
         padding-bottom: 1rem;
         font-weight: 400;
         font-size: 1.2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 2rem;
+        }
 
         &:hover {
             color: $primary;

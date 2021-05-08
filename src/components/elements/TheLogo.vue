@@ -34,6 +34,10 @@ export default {
     &__title {
         font-size: 3rem;
         font-weight: 700;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 4rem;
+        }
     }
     &__link {
         text-decoration: none;

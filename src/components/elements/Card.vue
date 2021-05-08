@@ -23,6 +23,11 @@ export default {
     border-radius: 0.5rem;
     position: relative;
 
+    @media only screen and (max-width: $bp-small) {
+        text-align: center;
+        padding: 8rem 5rem 6rem;
+    }
+
     &__icon {
         background-color: $primary-dark;
         display: inline-block;
@@ -31,6 +36,11 @@ export default {
         position: absolute;
         top: 0;
         transform: translateY(-50%);
+
+        @media only screen and (max-width: $bp-small) {
+            left: 50%;
+            margin-left: -33px;
+        }
 
         & > * {
             display: block;
@@ -44,12 +54,20 @@ export default {
         font-weight: 700;
         padding-bottom: 1rem;
         color: $dark-violet;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 3.2rem;
+        }
     }
 
     &__content {
         font-weight: 400;
         font-size: 1.6rem;
         color: $neutral-violet;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.2rem;
+        }
     }
 }
 </style>

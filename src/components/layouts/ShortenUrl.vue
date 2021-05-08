@@ -23,7 +23,11 @@
                 class="shorten-url__short"
                 v-text="shortenUrl"
             ></a>
-            <div :class="buttonCopy" @click="copyToClipboard">
+            <div
+                class="shorten-url__button"
+                :class="buttonCopy"
+                @click="copyToClipboard"
+            >
                 <the-button
                     styles="button-sm-squared"
                     type="button"
@@ -53,8 +57,8 @@ export default {
             return this.textButton !== "Copy" ? "shorten-url__clicked" : "";
         },
         reducedFullUrl() {
-            if (this.fullUrl.length > 40)
-                return this.fullUrl.substring(0, 40) + "...";
+            if (this.fullUrl.length > 25)
+                return this.fullUrl.substring(0, 25) + "...";
             return this.fullUrl;
         },
     },
@@ -77,7 +81,6 @@ export default {
 <style lang="scss">
 .shorten-url {
     width: 100%;
-    display: block;
     background-color: $light;
     display: flex;
     justify-content: space-between;
@@ -85,6 +88,12 @@ export default {
     padding: 1rem 2rem;
     border-radius: 0.5rem;
     position: relative;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 2.5rem 2rem;
+    }
 
     &__close {
         position: absolute;
@@ -122,12 +131,25 @@ export default {
         text-decoration: none;
         color: $dark-violet;
         font-size: 1.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            border-bottom: 1px $bg-gray solid;
+            padding-bottom: 2rem;
+            font-size: 2.5rem;
+        }
     }
 
     &__manage {
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+        }
     }
 
     &__short {
@@ -136,6 +158,26 @@ export default {
         color: $primary;
         font-size: 1.5rem;
         margin-right: 2rem;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            flex: 1;
+            padding: 1.5rem 0;
+            font-size: 2.5rem;
+            margin-right: 0;
+        }
+    }
+
+    &__button {
+        width: 100%;
+        & > * {
+            @media only screen and (max-width: $bp-small) {
+                flex: 1;
+                width: 100%;
+                display: block;
+                font-size: 2rem !important;
+            }
+        }
     }
 
     &__clicked button {

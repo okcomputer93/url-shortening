@@ -14,6 +14,7 @@
                     v-model="url"
                     @keyup="error = ''"
                 />
+                <p v-if="error" class="shorten__error" v-text="error"></p>
                 <div class="shorten__button">
                     <the-button
                         :disabled="isLoading"
@@ -30,7 +31,6 @@
                     </the-button>
                 </div>
             </div>
-            <p v-if="error" class="shorten__error" v-text="error"></p>
         </form>
         <div class="shorten__links">
             <div
@@ -130,6 +130,12 @@ export default {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__bar {
@@ -141,6 +147,12 @@ export default {
         border-radius: 1rem;
         border: none;
         font-family: "Poppins", sans-serif;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 100%;
+            margin-bottom: 4rem;
+            padding: 1.2rem 1.5rem;
+        }
 
         &::placeholder {
             font-size: 2rem;
@@ -162,6 +174,23 @@ export default {
         flex: none;
         margin-left: 3rem;
         width: 18.7rem;
+
+        @media only screen and (max-width: $bp-small) {
+            flex: 1;
+            width: 100%;
+            margin-left: 0;
+        }
+
+        & > * {
+            @media only screen and (max-width: $bp-large) {
+                font-size: 2rem !important;
+            }
+
+            @media only screen and (max-width: $bp-small) {
+                width: 100% !important;
+                font-size: 3rem !important;
+            }
+        }
     }
 
     &__links {
@@ -170,6 +199,10 @@ export default {
 
     &__link:not(:last-child) {
         padding-bottom: 1.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 4rem;
+        }
     }
 
     &__loading {
@@ -177,15 +210,25 @@ export default {
         height: 3rem;
         margin: 0 3.8rem;
         display: block;
+
+        @media only screen and (max-width: $bp-small) {
+            margin: 0 auto;
+        }
     }
 
     &__error {
+        bottom: 10%;
         position: absolute;
         padding-top: 0.3rem;
         color: $dark-violet;
         font-size: 1.5rem;
         font-style: italic;
         color: $secondary;
+
+        @media only screen and (max-width: $bp-small) {
+            top: 42%;
+            left: 4rem;
+        }
     }
 }
 </style>

@@ -67,10 +67,17 @@ export default {
 .main {
     max-width: $max-width;
     margin: 2rem auto;
-    padding: 0 $margin-body 12rem;
+    padding: 0 $margin-body 15rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        padding: 0 4rem 20rem;
+    }
 
     &__title {
         font-size: 8rem;
@@ -78,6 +85,13 @@ export default {
         font-weight: 700;
         color: $dark-blue;
         letter-spacing: -3px;
+
+        @media only screen and (max-width: $bp-small) {
+            padding-top: 4rem;
+            font-size: 6rem;
+            letter-spacing: -1px;
+            line-height: 1.1;
+        }
     }
 
     &__subtitle {
@@ -86,6 +100,12 @@ export default {
         color: $neutral-violet;
         padding: 0.5rem 0 3rem;
         letter-spacing: 1px;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 2rem 0 4rem;
+            font-size: 2.5rem;
+            letter-spacing: 0;
+        }
     }
 
     &__column--left {
@@ -99,6 +119,11 @@ export default {
         width: 130%;
         display: inline-block;
         transform: translateX(12%);
+
+        @media only screen and (max-width: $bp-small) {
+            width: 145%;
+            transform: translateX(2%);
+        }
     }
 }
 
@@ -107,12 +132,19 @@ export default {
     margin: 2rem auto;
     padding: 0 $margin-body;
 
+    @media only screen and (max-width: $bp-small) {
+        padding: 0 4rem;
+    }
+
     & .shorten__container {
         transform: translateY(-50%);
     }
 
     & .shorten__links {
         margin-top: -7rem;
+        @media only screen and (max-width: $bp-small) {
+            margin-top: -10rem;
+        }
     }
 }
 
@@ -122,7 +154,11 @@ export default {
     &__content {
         max-width: $max-width;
         margin: 0 auto;
-        padding: 10rem $margin-body 20rem; //TODO: Resize this when the search component is done.
+        padding: 10rem $margin-body 20rem;
+
+        @media only screen and (max-width: $bp-small) {
+            padding: 10rem 4rem 12rem;
+        }
     }
 
     &__top {
@@ -139,6 +175,9 @@ export default {
         padding-bottom: 1rem;
         color: $dark-violet;
         letter-spacing: -1px;
+        @media only screen and (max-width: $bp-small) {
+            padding-bottom: 2rem;
+        }
     }
 
     &__subtitle {
@@ -147,6 +186,11 @@ export default {
         color: $neutral-violet;
         width: 45%;
         line-height: 3.5rem;
+
+        @media only screen and (max-width: $bp-small) {
+            font-size: 2.2rem;
+            width: 90%;
+        }
     }
 }
 </style>
