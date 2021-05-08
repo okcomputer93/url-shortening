@@ -1,6 +1,6 @@
 module.exports = {
     publicPath:
-        process.env.NODE_ENV === "production" ? "/url-shortening/dist/" : "/",
+        process.env.NODE_ENV === "production" ? "/url-shortening/" : "/",
     css: {
         loaderOptions: {
             scss: {
