@@ -8,6 +8,8 @@
             <div class="shorten__input">
                 <input
                     autofocus
+                    name="search"
+                    aria-hidden="true"
                     placeholder="Shorten a link here..."
                     class="shorten__bar"
                     :class="error ? 'shorten__bar--error' : ''"
