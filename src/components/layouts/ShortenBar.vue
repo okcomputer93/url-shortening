@@ -104,7 +104,8 @@ export default {
         },
     },
     mounted() {
-        this.links = JSON.parse(localStorage.getItem("shortly-links"));
+        if (!localStorage.getItem("shortly-links"))
+            this.links = JSON.parse(localStorage.getItem("shortly-links"));
     },
 };
 </script>
